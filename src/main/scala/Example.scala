@@ -1,5 +1,7 @@
-import doodle.core._
-import doodle.core.Image._
+package joohyung
+
+import doodle.core.Color
+import doodle.core.Image.circle
 import doodle.syntax._
 import doodle.jvm.Java2DFrame._
 import doodle.backend.StandardInterpreter._
@@ -10,9 +12,16 @@ import doodle.backend.StandardInterpreter._
 // 2. run the `console` command within `sbt`
 // 3. enter `Example.image.draw`
 object Example {
-  val image = circle(10).fillColor(Color.red) on circle(20) on circle(30)
 
-  def main(args: Array[String]): Unit = {
-    image.draw
-  }
+  val hi = "Hi!"
+
+}
+
+//(circle(100) fillColor Color.paleGoldenrod lineColor Color.indianRed).draw
+
+object One {
+  val a: Int = b - 1
+  val b: Int = a + 1
+
+  val answer = a + b
 }
