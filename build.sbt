@@ -19,6 +19,3 @@ libraryDependencies ++= Seq(
   "underscoreio" %% "doodle" % "0.8.3",
   "org.typelevel" %% "cats-core" % "1.1.0"
 )
-1+2
-
-"ada" ++ " " ++ "lovelace"
