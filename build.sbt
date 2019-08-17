@@ -16,6 +16,6 @@ cleanupCommands in console := """
     """.trim.stripMargin
 
 libraryDependencies ++= Seq(
-  "org.creativescala" %% "doodle" % "0.9.4",
-  "org.typelevel" %% "cats-core" % "1.6.1"
+  "underscoreio" %% "doodle" % "0.8.3",
+  "org.typelevel" %% "cats-core" % "2.0.0-RC1"
 )
