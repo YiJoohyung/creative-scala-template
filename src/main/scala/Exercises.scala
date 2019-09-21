@@ -163,5 +163,75 @@ object Exercise13 {
 }
 
 object Exercise14 {
-  
+  def main(args: Array[String]): Unit = {
+    print("What is the order amount? ")
+    val amount = readDouble()
+    print("What is the state? ")
+    val state = readLine()
+    val tax = amount * 0.055
+    if (state == "WI") println(s"The subtotal is $$${amount}.") else println(s"The total is $$${amount}.")
+    if (state == "WI") println(s"The tax is $$${tax}.")
+    if (state == "WI") println(s"The total is $$${amount + tax}.")
+  }
+}
+
+object Exercise15 {
+  def main(args: Array[String]): Unit = {
+    print("What is the password? ")
+    val answer = readLine()
+    val password = "abc$123"
+    if (answer == password) println("Welcome!") else println("I don't know you.")
+  }
+}
+
+object Exercise16 {
+  def main(args: Array[String]): Unit = {
+    print("What is your age? ")
+    val age = readInt()
+    if (age >= 16) println("You are old enough to legally drive.") else println("You are not old enough to legally drive.")
+  }
+}
+
+object Exercise17 {
+  def main(args: Array[String]): Unit = {
+    print("How much do you weight? ")
+    val weight = readDouble()
+    print("What is your sex? ")
+    val gender = readLine()
+    val r = if (gender == "man") 0.73 else 0.66
+    print("What was your number of drinks? ")
+    val number = readInt()
+    print("How much did you drink in total? ")
+    val amount = readDouble()
+    val BAC = (amount * 5.14 / weight * r )
+    println(s"Your BAC is ${BAC}")
+    if (BAC >= 0.08) println("It is not legal for you to drive.") else println("It is legal for you to drive.")
+  }
+}
+
+object Exercise18 {
+  def main(args: Array[String]): Unit = {
+    println("Press C to convert from Fahrenheit to Celsius.")
+    println("Press F to convert from Celsius to Fahrenheit.")
+    print("Your Choice: ")
+    val choice = readLine()
+    println()
+    if (choice == "C") print("Please enter the temperature in Fahrenheit: ") else print("Please enter the temperature in Celsius: ")
+    val value = readDouble()
+    val ftoc = (value - 32 ) * 5 / 9
+    val ctof = (value * 9 / 5) + 32
+    if (choice == "C") println(s"The temperature in Celsius is ${ftoc}.") else println(s"The temperature in Celsius is ${ctof}.")
+  }
+}
+
+object Exercise19 {
+  def main(args: Array[String]): Unit = {
+    print("How much do you weigh? ")
+    val weight = readDouble()
+    print("How tall are you? ")
+    val height = readDouble()
+    val BMI = (weight / (height * height)) * 703
+    println(s"Your BMI is ${BMI}.")
+    if (18.5 <= BMI && BMI <= 25) println("You are within the ideal weight range.") else if (BMI > 25) println("You are overweight. You should see your doctor.") else println("Your are underweight.")
+  }
 }
